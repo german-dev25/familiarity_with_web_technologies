@@ -18,6 +18,8 @@ function generateRandomArray() {
 }
 
 var randomArray = generateRandomArray();
-var reverseArray = randomArray.sort().reverse();
+var reverseArray = randomArray.slice().sort (function(a, b) {
+    return b - a}
+    )
 console.log(randomArray);
 console.log(reverseArray);
