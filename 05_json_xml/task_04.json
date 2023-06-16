@@ -1,0 +1,668 @@
+{
+	"info": {
+		"_postman_id": "9cc9c50e-7296-46d9-933b-ba5a20e70ad5",
+		"name": "gb_familiarity_with_web_technologies_hw_5_task_4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20606372"
+	},
+	"item": [
+		{
+			"name": "Get Single User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users/2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Single User",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://reqres.in/api/users/2",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 16 Jun 2023 08:29:22 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"118-pbdwwFo9SKNhD3Lx5iHJyngpq00\""
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=14400"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "HIT"
+						},
+						{
+							"key": "Age",
+							"value": "6184"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=G%2BJmkFl%2BraXmukzPa11uThtACF8N4E2JHesEOnkJS4KI2Uq2ZeOgi%2BZMudS7iLfIKdo9lMFaXtOCzWsg%2BPq9YjTWbOWajy2tb5ab9T2uGjSyzpjXZbdLiFMbRg%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7d81af4aa8390ee4-HKG"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"email\": \"janet.weaver@reqres.in\",\n        \"first_name\": \"Janet\",\n        \"last_name\": \"Weaver\",\n        \"avatar\": \"https://reqres.in/img/faces/2-image.jpg\"\n    },\n    \"support\": {\n        \"url\": \"https://reqres.in/#support-heading\",\n        \"text\": \"To keep ReqRes free, contributions towards server costs are appreciated!\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Иван Иванов\",\n  \"job\": \"Разработчик\",\n  \"email\": \"ivanov@example.com\",\n  \"gender\": \"мужской\",\n  \"age\": 25,\n  \"address\": {\n    \"street\": \"ул. Центральная, 123\",\n    \"city\": \"Москва\",\n    \"region\": \"Московская область\",\n    \"country\": \"Россия\"\n  },\n  \"skills\": [\"Java\", \"Python\", \"JavaScript\"],\n  \"experience\": [\n    {\n      \"position\": \"Программист\",\n      \"company\": \"АО Для Программистов\",\n      \"years\": 3\n    },\n    {\n      \"position\": \"Ведущий разработчик\",\n      \"company\": \"ООО Для Программистов\",\n      \"years\": 5\n    }\n  ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Not Simple User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Иван Иванов\",\n  \"job\": \"Разработчик\",\n  \"email\": \"ivanov@example.com\",\n  \"gender\": \"мужской\",\n  \"age\": 25,\n  \"address\": {\n    \"street\": \"ул. Центральная, 123\",\n    \"city\": \"Москва\",\n    \"region\": \"Московская область\",\n    \"country\": \"Россия\"\n  },\n  \"skills\": [\"Java\", \"Python\", \"JavaScript\"],\n  \"experience\": [\n    {\n      \"position\": \"Программист\",\n      \"company\": \"АО Для Программистов\",\n      \"years\": 3\n    },\n    {\n      \"position\": \"Ведущий разработчик\",\n      \"company\": \"ООО Для Программистов\",\n      \"years\": 5\n    }\n  ]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reqres.in/api/users",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 16 Jun 2023 08:29:46 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "598"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"256-Z7kfHzWR0VlPotIde0t0IILkz58\""
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=W%2BGhNiI9tQaS87Ehlpf0W6z3PBKXEgNl3hlS3faP9q5MyK%2FDUSyTsOc2l7ka7gbqm5tSiHaIRIg16EhZJR%2F9kvFuv4Kmi2P1dpiQ4144vQl4m8UIRiH%2FLUxs0g%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7d81afd9e90c0ee4-HKG"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Иван Иванов\",\n    \"job\": \"Разработчик\",\n    \"email\": \"ivanov@example.com\",\n    \"gender\": \"мужской\",\n    \"age\": 25,\n    \"address\": {\n        \"street\": \"ул. Центральная, 123\",\n        \"city\": \"Москва\",\n        \"region\": \"Московская область\",\n        \"country\": \"Россия\"\n    },\n    \"skills\": [\n        \"Java\",\n        \"Python\",\n        \"JavaScript\"\n    ],\n    \"experience\": [\n        {\n            \"position\": \"Программист\",\n            \"company\": \"АО Для Программистов\",\n            \"years\": 3\n        },\n        {\n            \"position\": \"Ведущий разработчик\",\n            \"company\": \"ООО Для Программистов\",\n            \"years\": 5\n        }\n    ],\n    \"id\": \"137\",\n    \"createdAt\": \"2023-06-16T08:29:46.236Z\"\n}"
+				},
+				{
+					"name": "Create Simple User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Иван Иванов\",\n  \"job\": \"Разработчик\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reqres.in/api/users",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 16 Jun 2023 09:15:01 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "112"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"70-W4AtqpqWFNyGcvX0hOoG1Bf5VT4\""
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=8Zj5%2BY%2FRSnEZOYxbIgndAg5easu9n73Shgl4YlFacL3SSHNWRzUZY9lNFpNgC27xnOuWrwG3ZOe9%2BQf6GrGVGQtoBHWkXGACnyflWfY2DL8j%2Bw0zaMAlc%2FwYZw%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7d81f2264af10499-HKG"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Иван Иванов\",\n    \"job\": \"Разработчик\",\n    \"id\": \"30\",\n    \"createdAt\": \"2023-06-16T09:15:01.797Z\"\n}"
+				},
+				{
+					"name": "Create User From Get",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"janet.weaver@reqres.in\",\n    \"first_name\": \"Janet\",\n    \"last_name\": \"Weaver\",\n    \"avatar\": \"https://reqres.in/img/faces/2-image.jpg\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reqres.in/api/users",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 16 Jun 2023 09:19:54 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "177"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"b1-NbvJrR18RFzvoQy256e1HApezro\""
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=n5r8UmCRoLd6YVDygNazpAphqogtt3e7p8jEn7jgPorjHUutvnrC6ZtW%2Bf%2B137qT9A1t90JYi4Cc%2FwyPih%2Beo9kY9ql30Q5QO6OjMFv6wlZ1uQeuIJASQh8BHg%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7d81f94c1cf20499-HKG"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"email\": \"janet.weaver@reqres.in\",\n    \"first_name\": \"Janet\",\n    \"last_name\": \"Weaver\",\n    \"avatar\": \"https://reqres.in/img/faces/2-image.jpg\",\n    \"id\": \"744\",\n    \"createdAt\": \"2023-06-16T09:19:54.572Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "PUT User",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"janet1.weaver@reqres.in\",\n    \"first_name\": \"Janet2\",\n    \"last_name\": \"Weaver3\",\n    \"avatar\": \"https://reqres.in/img/faces/2-image.jpg\",\n    \"id\": \"100\",\n    \"createdAt\": \"2023-06-16T09:19:54.572Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users/744",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"744"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "PUT User New Data",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"janet1.weaver@reqres.in\",\n    \"first_name\": \"Janet2\",\n    \"last_name\": \"Weaver3\",\n    \"avatar\": \"https://reqres.in/img/faces/2-image.jpg\",\n    \"id\": \"100\",\n    \"createdAt\": \"2023-06-16T09:19:54.572Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reqres.in/api/users/744",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users",
+								"744"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 16 Jun 2023 09:23:35 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"db-ApYKV5IeGSYFFdpd2ILbTU9d2TQ\""
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=Gqvk%2FoDiDv1J6WgxvwZSpS9UjS2bYO74O8zZg8rVAhx3g6sM%2BiXUmJAPwRrnbZeLDhLYIP7RgouPEEBt4o18aXhsJUmP6EUGLYHqjDvsYam96SGinBd3ikjCNA%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7d81feae4de40499-HKG"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"email\": \"janet1.weaver@reqres.in\",\n    \"first_name\": \"Janet2\",\n    \"last_name\": \"Weaver3\",\n    \"avatar\": \"https://reqres.in/img/faces/2-image.jpg\",\n    \"id\": \"100\",\n    \"createdAt\": \"2023-06-16T09:19:54.572Z\",\n    \"updatedAt\": \"2023-06-16T09:23:35.090Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "User Some Data",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"janet123.weaver@reqres.in\",\n    \"first_name\": \"Janet-Janet\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users/100",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"100"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Patch Janet Data",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"janet123.weaver@reqres.in\",\n    \"first_name\": \"Janet-Janet\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reqres.in/api/users/100",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users",
+								"100"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 16 Jun 2023 09:25:44 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"67-Y7b1n9ts3H5YERQYAE2/WxdnVsI\""
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=CvdYWterkABoeppYGf%2BF0zX0bN1vysmtPQGTvzT2dhgfWPRZWtnUNO1BPhfRPGB0qRuQlRQl6q8sucWvJDaYrIAU9iq2YSkEB9DenJUo2gFc3OWK0%2FBvqYrMnQ%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7d8201d3abee0499-HKG"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"email\": \"janet123.weaver@reqres.in\",\n    \"first_name\": \"Janet-Janet\",\n    \"updatedAt\": \"2023-06-16T09:25:43.932Z\"\n}"
+				}
+			]
+		}
+	]
+}
